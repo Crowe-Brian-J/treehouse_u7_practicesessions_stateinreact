@@ -23,7 +23,11 @@ const StarRating = () => {
   // Write an event handler that updates the courseRating state.
   // Pass the function to a Star component via props
   const handleRating = (rating) => {
-    setCourseRating(rating)
+    if (courseRating === rating) {
+      setCourseRating(0)
+    } else {
+      setCourseRating(rating)
+    }
   }
 
   return <ul className="course--stars">{renderStars()}</ul>
