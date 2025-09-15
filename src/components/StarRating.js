@@ -9,6 +9,7 @@ const StarRating = () => {
   const renderStars = () => {
     const stars = []
     for (let i = 0; i < 5; i++) {
+      console.log('Rendering star: ', i)
       stars.push(
         <Star
           key={i}
@@ -26,7 +27,7 @@ const StarRating = () => {
     setCourseRating(rating)
   }
 
-  return <ul className="course--stars">{renderStars}</ul>
+  return <ul className="course--stars">{renderStars()}</ul>
 }
 
 export default StarRating
