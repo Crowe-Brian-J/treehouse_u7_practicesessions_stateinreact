@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Star from './Star'
 
 const StarRating = () => {
   // Initialize a 'courseRating' state
@@ -9,9 +10,11 @@ const StarRating = () => {
     const stars = []
     for (let i = 0; i < 5; i++) {
       stars.push(
-        <li key={i} onClick={() => handleRating(i + 1)}>
-          {i < courseRating ? 'Yes' : 'No'}
-        </li>
+        <Star
+          key={i}
+          selected={i < courseRating}
+          onClick={() => handleRating(i + 1)}
+        />
       )
     }
     return stars
