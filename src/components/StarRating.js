@@ -9,7 +9,6 @@ const StarRating = () => {
   const renderStars = () => {
     const stars = []
     for (let i = 0; i < 5; i++) {
-      console.log('Rendering star: ', i)
       stars.push(
         <Star
           key={i}
